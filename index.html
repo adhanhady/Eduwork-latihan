@@ -1,87 +1,87 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Saya</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <table class="navbar" width="100%" border="1">
-      <tr>
-        <td><b>Brand</b></td>
-        <td align="right">
-          <a href="#">Header</a> | <a href="#">Biodata</a> |
-          <a href="#">Portofolio</a>
-        </td>
-      </tr>
-    </table>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="brand">Brand</div>
 
-    <!-- Section 1 - Header -->
-    <table width="100%" border="1">
-      <tr>
-        <td width="60%">
-          <h2>Selamat Datang di Website Saya</h2>
-          <p>
-            Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks
-            seperti ini.
-          </p>
-          <a href="#">Pelajari Lebih Lanjut</a>
-        </td>
-        <td width="40%" align="center">
-          <img src="https://placehold.co/600x400" width="300" />
-        </td>
-      </tr>
-    </table>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    <!-- Section 2 - About Me -->
-    <table width="100%" border="1">
-      <tr>
-        <td align="center">
-          <h2>About Me</h2>
-          <p>A brief introduction about myself</p>
-        </td>
-      </tr>
-    </table>
+        <div class="menu" id="menu">
+          <a href="#home">Header</a>
+          <a href="#about">Biodata</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Section 3 - Biodata 6 Box -->
-    <table width="100%" border="1">
-      <tr>
-        <td align="center">Full Name</td>
-        <td align="center">Education</td>
-        <td align="center">Pekerjaan</td>
-      </tr>
-      <tr>
-        <td align="center">Contact</td>
-        <td align="center">Hobi</td>
-        <td align="center">Alamat</td>
-      </tr>
-    </table>
+    <!-- Hero Section -->
+    <section id="home" class="hero container">
+      <div class="hero-text">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>
+          Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks
+          seperti ini.
+        </p>
+        <a href="#" class="btn">Pelajari Lebih Lanjut</a>
+      </div>
+      <div class="hero-image">
+        <img src="img/profil.jpeg" alt="Profile" />
+      </div>
+    </section>
 
-    <!-- Section 4 - Portofolio -->
-    <table width="100%" border="1">
-      <tr>
-        <td colspan="3" align="center">
-          <h2>Portofolio</h2>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <img src="https://placehold.co/350x200" /><br />
-          <b>Proyek 1</b>
-          <p>Deskripsi proyek 1.</p>
-        </td>
-        <td align="center">
-          <img src="https://placehold.co/350x200" /><br />
-          <b>Proyek 2</b>
-          <p>Deskripsi proyek 2.</p>
-        </td>
-        <td align="center">
-          <img src="https://placehold.co/350x200" /><br />
-          <b>Proyek 3</b>
-          <p>Deskripsi proyek 3.</p>
-        </td>
-      </tr>
-    </table>
+    <!-- About -->
+    <section id="about" class="about container">
+      <h2>About Me</h2>
+      <p class="subtitle">A brief introduction about myself</p>
+
+      <div class="biodata-grid">
+        <div class="card">Full Name: Dodi</div>
+        <div class="card">Education: S1 Informatika</div>
+        <div class="card">Pekerjaan: Programmer</div>
+        <div class="card">Contact: dodi@email.com</div>
+        <div class="card">Hobi: Membaca, Coding</div>
+        <div class="card">Alamat: Jakarta</div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio container">
+      <h2>Portfolio</h2>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="https://placehold.co/600x400" alt="Proyek 1" />
+          <h3>Proyek 1</h3>
+          <p>Deskripsi proyek 1</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://placehold.co/600x400" alt="Proyek 2" />
+          <h3>Proyek 2</h3>
+          <p>Deskripsi proyek 2</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://placehold.co/600x400" alt="Proyek 3" />
+          <h3>Proyek 3</h3>
+          <p>Deskripsi proyek 3</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 AdhanHady. All rights reserved.</footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
